@@ -22,9 +22,10 @@ class Friends extends React.Component {
  render() {
     return (
         <div className="App">
+            <h2>Your Friends List</h2>
             {
                 this.state.friends.map(friend => {
-                    <p>{friend.name}</p>
+                    return <p>- {friend.name} - {friend.email}</p>
                 })
             }
         </div>
