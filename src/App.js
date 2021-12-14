@@ -12,14 +12,18 @@ function App() {
     <div>
     <div className="App-header">
       <h2>Client Auth Project</h2>
-          <Link to='/api/login'>Login</Link>
-          <Link to='/api/logout'>Logout</Link>
-          <Link to='/api/friends'>Friends</Link>
+          <Link to='/login'>Login</Link>
+          <Link to='/logout'>Logout</Link>
+          <Link to='/friends'>Friends</Link>
+          <Link to='/friend/add'>Add Friends</Link>
       </div>
       <Switch>
-        <PrivateRoute exact path="/api/friends" component={Friends} />
-        <PrivateRoute path="/api/logout" component={Logout} />
-        <Route path="/api/login" component={Login} />
+        <PrivateRoute exact path="/friends" component={Friends} />
+        <PrivateRoute path="/friends/add" component={Friends} />
+        <Route path="/logout" component={Logout} />
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Login} />
+
       </Switch>
     </div>
   );

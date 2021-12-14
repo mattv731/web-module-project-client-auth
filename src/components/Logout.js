@@ -10,12 +10,12 @@ const Logout = () => {
             .post('/logout')
             .then(resp => {
                 localStorage.removeItem('token');
-                push('/api/login');
+                push('/api');
             });
     }, []);
     return(
-        <div>
-            <h3>You have successfully logged out</h3>
+        <div className="App">
+            <h2>You have successfully logged out</h2>
         </div>
     )
 }

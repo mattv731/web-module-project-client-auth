@@ -27,7 +27,7 @@ class Login extends React.Component {
             localStorage.setItem('token', token);
             localStorage.setItem('role', role);
             localStorage.setItem('username', username);
-            this.props.history.push('/api/friends')
+            this.props.history.push('/friends')
         })
         .catch(err => {
             console.log(err)
