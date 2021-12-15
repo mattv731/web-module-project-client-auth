@@ -13,7 +13,6 @@ class Friends extends React.Component {
             this.setState({
                 friends: resp.data
                 })
-                console.log(this.state.friends)
             })
         .catch(err => {
             console.log(err)
